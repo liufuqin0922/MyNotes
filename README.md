@@ -8,8 +8,15 @@ Todo:
 * kill进程
 * sql防注入代码
 * 上传漏洞防护
+* 日志管理
+* 文件监控
+* 网络端口监控
+* waf过滤sqlmap  //sql改head
+* 后门批量上传，管理
+* 目录禁止写入
 
-
+http://bobao.360.cn/ctf/learning/210.html
+https://bbs.ichunqiu.com/thread-25092-1-1.html?from=aqzx2
 
 ## mac terminal
 http://www.jianshu.com/p/c36dfdfa6569
