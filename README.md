@@ -15,7 +15,7 @@ Todo:
 * 后门批量上传，管理
 * 目录禁止写入
 * 后门开机启动 定时运行
-* 
+* 自动化程度提高
 http://bobao.360.cn/ctf/learning/210.html  
 https://bbs.ichunqiu.com/thread-25092-1-1.html?from=aqzx2
 
