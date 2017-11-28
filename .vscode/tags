@@ -1,0 +1,12 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Mydict.py	../Mydict.py	1;"	kind:file	line:1
+Trie	../Mydict.py	/^class Trie(object):$/;"	kind:class	line:6
+TrieNode	../Mydict.py	/^class TrieNode(object):$/;"	kind:class	line:1
+__init__	../Mydict.py	/^    def __init__(self, _child=None,_inter=None):$/;"	kind:member	line:2
+__init__	../Mydict.py	/^    def __init__(self,_Node=None):$/;"	kind:member	line:7
+insertDict	../Mydict.py	/^    def insertDict(self, root,word,inter):$/;"	kind:member	line:10
