@@ -2,6 +2,8 @@
 Todo:
 * 各种后门隐藏与发现 
 * webshell
+* msf 一件传shell 执行
+* 各大cms shell
 * 提权
 * owasp
 * netstat：端口，连接排查
@@ -17,6 +19,7 @@ Todo:
 * 目录禁止写入
 * 后门开机启动 定时运行
 * 自动化程度提高
+* 
 http://bobao.360.cn/ctf/learning/210.html  
 https://bbs.ichunqiu.com/thread-25092-1-1.html?from=aqzx2
 
