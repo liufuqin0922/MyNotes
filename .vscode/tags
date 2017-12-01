@@ -5,8 +5,11 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
 Mydict.py	../Mydict.py	1;"	kind:file	line:1
-Trie	../Mydict.py	/^class Trie(object):$/;"	kind:class	line:6
+Trie	../Mydict.py	/^class Trie(object):$/;"	kind:class	line:9
 TrieNode	../Mydict.py	/^class TrieNode(object):$/;"	kind:class	line:1
 __init__	../Mydict.py	/^    def __init__(self, _child=None,_inter=None):$/;"	kind:member	line:2
-__init__	../Mydict.py	/^    def __init__(self,_Node=None):$/;"	kind:member	line:7
-insertDict	../Mydict.py	/^    def insertDict(self, root,word,inter):$/;"	kind:member	line:10
+__init__	../Mydict.py	/^    def __init__(self,_Node=TrieNode()):$/;"	kind:member	line:10
+createDict	../Mydict.py	/^    def createDict(self):$/;"	kind:member	line:37
+dictionaryTrie	../Mydict.py	/^    dictionaryTrie=Trie()$/;"	kind:variable	line:62
+insertDict	../Mydict.py	/^    def insertDict(self, root,word,inter):$/;"	kind:member	line:13
+query	../Mydict.py	/^    def query(needToQuertWord,root=self.Node):$/;"	kind:member	line:46
