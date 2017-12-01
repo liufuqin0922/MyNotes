@@ -12,4 +12,5 @@ __init__	../Mydict.py	/^    def __init__(self,_Node=TrieNode()):$/;"	kind:member
 createDict	../Mydict.py	/^    def createDict(self):$/;"	kind:member	line:37
 dictionaryTrie	../Mydict.py	/^    dictionaryTrie=Trie()$/;"	kind:variable	line:62
 insertDict	../Mydict.py	/^    def insertDict(self, root,word,inter):$/;"	kind:member	line:13
+install.py	../blog&md/入侵检测/awd-waf/install.py	1;"	kind:file	line:1
 query	../Mydict.py	/^    def query(needToQuertWord,root=self.Node):$/;"	kind:member	line:46
