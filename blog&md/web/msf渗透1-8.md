@@ -234,19 +234,17 @@ https://github.com/ajinabraham/Mobile-Security-Framework-MobSF/wiki/1.-Documenta
 
 ## 1 MS08-067漏洞 smb服务
 
-`process Explorer` 进程监控  
-`geiuid` 获取用户识别码  
-`shell` 得到shell  
+
 `net user` 当前账户
 `net user` username password /add  添加账户密码
 MS11-058 MS12-020
-## 2 msf基本命令
+## msf基本命令
 `msfupdate`  更新
 `connect` 连接一个主机,   
 `info` 显示模块信息,  
-`back` 从当前环境返回,  
-`? banner` 输出banner使用方法,  
-`irb ruby` 模式,   
+`back` 从当前环境返回,
+`? banner` 输出banner使用方法,
+`irb ruby` 模式,
 `jobs` 任务管理器,   
 `resource` 运行储存在一个文件中的命令  
 `version` 显示版本信息  
@@ -256,6 +254,7 @@ MS11-058 MS12-020
 ## 模块
  `portscan` 端口扫描  
  `sniffer` 嗅探
+ `psexec` 
 
 
 ### 目录
@@ -281,7 +280,17 @@ MS11-058 MS12-020
 
 
 
-
+## meterpreter
+常用命令：
+1. hashdump 得到密码
+1. `process Explorer` 进程监控  
+1. `geiuid` 获取用户识别码  
+1. `shell` 得到shell  
+1. `getsystem` 提权
+## 内核提权 有会话后
+1. ndproxy提权 search 14-002 
+## 后门生成
+msfpayload windows
 # 二进制收集
 ## 资源
 http://jackson.thuraisamy.me/re-resources.html
