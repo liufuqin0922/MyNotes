@@ -23,15 +23,28 @@ Todo:
 * 自动化程度提高
 * 编译所有的py
 * php 5.10 poc
-* 如何重启php
+# 如何重启php
+启动php-fpm:
+
+/usr/local/php/sbin/php-fpm
+INT, TERM 立刻终止
+QUIT 平滑终止
+USR1 重新打开日志文件
+USR2 平滑重载所有worker进程并重新载入配置和二进制模块
+先查看php-fpm的master进程号
+kill -USR2 \<master pid\>
 * 审计源代码，分析后门、命令执行、上传、SQL等威胁 * 现成CMS注意DIFF
 * 弱口令更改
 * 根据漏洞PATCH
 * 根据漏洞写出EXP，发动攻击 * 被攻击后完成EXP，PATCH
 * 自动化种马，权限维持
 * 自动化收割
-find /var/www/html ‐type f ‐path "*.php" | xargs sed ‐i "s/<?php/<?
-php\nrequire_once('\/tmp\/waf.php');\n/g"
+#查看已建立的网络连接及进程
+netstat ‐antulp | grep EST
+#查看页面访问排名前十的IP
+netstat ‐ant|awk |grep |sed ‐e ‐e |sort|uniq ‐c|sort ‐rn 
+
+
 http://bobao.360.cn/ctf/learning/210.html  
 https://bbs.ichunqiu.com/thread-25092-1-1.html?from=aqzx2
 

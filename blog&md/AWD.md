@@ -2,7 +2,7 @@
 备份www
 备份passwd
 linux_check
-修改默认口令
+修改默认口令 curl wget
 * 配置waf，文件监控，日志记录 * getflag所需命令改名
 * 改权限
 * 白盒审计工具
@@ -20,12 +20,9 @@ ssh user@remote_server tail -f /var/log/apache2/access.log | ngxtop -f
 ssh msfadmin@192.168.189.131 tail -f /var/log/apache2/access.log | ngxtop -f common
 ## 常用命令
 ```shell
-ssh <‐p 端口> 用户名@IP
 scp 文件路径 用户名@IP:存放路径
-tar ‐zcvf web.tar.gz /var/www/html/
-w
+who 查看tty
 pkill ‐kill ‐t <用户tty>
-ps aux | grep pid或者进程名
 #查看已建立的网络连接及进程
 netstat ‐antulp | grep EST
 #查看指定端口被哪个进程占用
@@ -37,7 +34,8 @@ kill ‐ <PID>
 #封杀某个IP或者ip段，如:.
 iptables ‐I INPUT ‐s . ‐j DROP
 iptables ‐I INPUT ‐s ./ ‐j DROP #禁止从某个主机ssh远程访问登陆到本机，如123..
-iptable ‐t filter ‐A INPUT ‐s . ‐p tcp ‐‐dport ‐j DROP #备份mysql数据库
+iptable ‐t filter ‐A INPUT ‐s . ‐p tcp ‐‐dport ‐j DROP 
+#备份mysql数据库
 mysqldump ‐u 用户名 ‐p 密码 数据库名 > back.sql
 mysqldump ‐‐all‐databases > bak.sql
 #还原mysql数据库
@@ -46,27 +44,30 @@ find / *.php ‐perm
 awk ‐F: /etc/passwd
 crontab ‐l
 #检测所有的tcp连接数量及状态
-netstat ‐ant|awk |grep |sed ‐e ‐e |sort|uniq ‐c|sort ‐rn #查看页面访问排名前十的IP
+netstat ‐ant|awk |grep |sed ‐e ‐e |sort|uniq ‐c|sort ‐rn 
+#查看页面访问排名前十的IP
 cat /var/log/apache2/access.log | cut ‐f1 ‐d
 r | head ‐
 #查看页面访问排名前十的URL
 cat /var/log/apache2/access.log | cut ‐f4 ‐d
 r | head ‐
 ```
+netstat ‐ant|awk |grep |sed ‐e ‐e |sort|uniq ‐c|sort ‐rn
 
 # 防御&&attack
 
 ## 防篡改
 chattr +i /etc/profile
 chattr -R +i /var/www/html
-chattr +a /var/;pg 只能追加
+chattr +a /var/log 只能追加
 ## 进程检查
 如果我们怀疑某个进程正在是受到溢出攻击后创建的shell进程，我们可以分析这个进程是否有socket连接，linux中查看指定进程socket 连接数的命令为:
 比如我们查看ssh进程的socket连接。如果我们检测的程序有socket连接，说明它正在进行网络通信，我们就需要进行进一步判断。
 
 
 ## 检查nfs
-
+rpcinfo -p 192.168.189.131
+showmount -e
  mkdir /tmp/r00t
 
  mount -t nfs 192.168.99.131:/ /tmp/r00t/

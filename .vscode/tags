@@ -9,8 +9,12 @@ Trie	../Mydict.py	/^class Trie(object):$/;"	kind:class	line:9
 TrieNode	../Mydict.py	/^class TrieNode(object):$/;"	kind:class	line:1
 __init__	../Mydict.py	/^    def __init__(self, _child=None,_inter=None):$/;"	kind:member	line:2
 __init__	../Mydict.py	/^    def __init__(self,_Node=TrieNode()):$/;"	kind:member	line:10
+base_dir	../blog&md/入侵检测/awd-waf/install.py	/^base_dir = '\/Users\/apple\/Documents\/data' #web路径$/;"	kind:variable	line:3
 createDict	../Mydict.py	/^    def createDict(self):$/;"	kind:member	line:37
 dictionaryTrie	../Mydict.py	/^    dictionaryTrie=Trie()$/;"	kind:variable	line:62
 insertDict	../Mydict.py	/^    def insertDict(self, root,word,inter):$/;"	kind:member	line:13
 install.py	../blog&md/入侵检测/awd-waf/install.py	1;"	kind:file	line:1
+modifyip	../blog&md/入侵检测/awd-waf/install.py	/^def modifyip(tfile,sstr,rstr):$/;"	kind:function	line:16
+os	../blog&md/入侵检测/awd-waf/install.py	/^import os$/;"	kind:namespace	line:1
 query	../Mydict.py	/^    def query(needToQuertWord,root=self.Node):$/;"	kind:member	line:46
+scandir	../blog&md/入侵检测/awd-waf/install.py	/^def scandir(startdir) :$/;"	kind:function	line:5
