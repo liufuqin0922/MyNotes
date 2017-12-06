@@ -26,7 +26,6 @@ Todo:
 * 目录禁止写入
 * 后门开机启动 定时运行
 * 自动化程度提高
-<<<<<<< HEAD
 * 编译所有的py
 * php 5.10 poc
 # 如何重启php
@@ -51,9 +50,6 @@ netstat ‐antulp | grep EST
 netstat ‐ant|awk |grep |sed ‐e ‐e |sort|uniq ‐c|sort ‐rn 
 
 
-=======
-* 
->>>>>>> e9b40c016e1e961f3d02d4e573944c0abf66d816
 http://bobao.360.cn/ctf/learning/210.html  
 https://bbs.ichunqiu.com/thread-25092-1-1.html?from=aqzx2
 

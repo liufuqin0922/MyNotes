@@ -1,5 +1,6 @@
 import os
-
+# find /var/www/html ‐type f ‐path "*.php" | xargs sed ‐i "s/<?php/<?
+# php\nrequire_once('\/tmp\/waf.php');\n/g"
 base_dir = '/Users/apple/Documents/data' #web路径
 
 def scandir(startdir) :
