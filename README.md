@@ -2,12 +2,9 @@
 Todo:
 * 各种后门隐藏与发现 
 * webshell
-<<<<<<< HEAD
 * getshell后如何getflag
-=======
 * msf 一件传shell 执行
 * 各大cms shell
->>>>>>> e9b40c016e1e961f3d02d4e573944c0abf66d816
 * 提权
 * owasp
 * 删账户
