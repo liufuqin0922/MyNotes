@@ -4,17 +4,18 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-Mydict.py	../Mydict.py	1;"	kind:file	line:1
-Trie	../Mydict.py	/^class Trie(object):$/;"	kind:class	line:9
-TrieNode	../Mydict.py	/^class TrieNode(object):$/;"	kind:class	line:1
-__init__	../Mydict.py	/^    def __init__(self, _child=None,_inter=None):$/;"	kind:member	line:2
-__init__	../Mydict.py	/^    def __init__(self,_Node=TrieNode()):$/;"	kind:member	line:10
-base_dir	../blog&md/入侵检测/awd-waf/install.py	/^base_dir = '\/Users\/apple\/Documents\/data' #web路径$/;"	kind:variable	line:3
-createDict	../Mydict.py	/^    def createDict(self):$/;"	kind:member	line:37
-dictionaryTrie	../Mydict.py	/^    dictionaryTrie=Trie()$/;"	kind:variable	line:62
-insertDict	../Mydict.py	/^    def insertDict(self, root,word,inter):$/;"	kind:member	line:13
+Mydict.py	../课程笔记(一般不记笔记/Mydict.py	1;"	kind:file	line:1
+Trie	../课程笔记(一般不记笔记/Mydict.py	/^class Trie(object):$/;"	kind:class	line:12
+TrieNode	../课程笔记(一般不记笔记/Mydict.py	/^class TrieNode(object):$/;"	kind:class	line:1
+__init__	../课程笔记(一般不记笔记/Mydict.py	/^    def __init__(self):$/;"	kind:member	line:13
+__init__	../课程笔记(一般不记笔记/Mydict.py	/^    def __init__(self, _child=None, _inter=None):$/;"	kind:member	line:2
+base_dir	../blog&md/入侵检测/awd-waf/install.py	/^base_dir = '\/Users\/apple\/Documents\/data' #web路径$/;"	kind:variable	line:4
+createdict	../课程笔记(一般不记笔记/Mydict.py	/^    def createdict(self):$/;"	kind:member	line:41
+dictionaryTrie	../课程笔记(一般不记笔记/Mydict.py	/^    dictionaryTrie = Trie()$/;"	kind:variable	line:70
+insertdict	../课程笔记(一般不记笔记/Mydict.py	/^    def insertdict(self, root, word, inter):$/;"	kind:member	line:17
 install.py	../blog&md/入侵检测/awd-waf/install.py	1;"	kind:file	line:1
-modifyip	../blog&md/入侵检测/awd-waf/install.py	/^def modifyip(tfile,sstr,rstr):$/;"	kind:function	line:16
+modifyip	../blog&md/入侵检测/awd-waf/install.py	/^def modifyip(tfile,sstr,rstr):$/;"	kind:function	line:17
+need_query_word	../课程笔记(一般不记笔记/Mydict.py	/^    need_query_word=input("!!!--")$/;"	kind:variable	line:73
 os	../blog&md/入侵检测/awd-waf/install.py	/^import os$/;"	kind:namespace	line:1
-query	../Mydict.py	/^    def query(needToQuertWord,root=self.Node):$/;"	kind:member	line:46
-scandir	../blog&md/入侵检测/awd-waf/install.py	/^def scandir(startdir) :$/;"	kind:function	line:5
+query	../课程笔记(一般不记笔记/Mydict.py	/^    def query(self, word, root=None):$/;"	kind:member	line:51
+scandir	../blog&md/入侵检测/awd-waf/install.py	/^def scandir(startdir) :$/;"	kind:function	line:6
