@@ -37,7 +37,6 @@ USR1 重新打开日志文件
 USR2 平滑重载所有worker进程并重新载入配置和二进制模块
 先查看php-fpm的master进程号
 kill -USR2 \<master pid\>
-
 * 审计源代码，分析后门、命令执行、上传、SQL等威胁 * 现成CMS注意DIFF
 * 弱口令更改
 * 根据漏洞PATCH
