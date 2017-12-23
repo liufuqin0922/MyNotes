@@ -35,3 +35,4 @@
 
 ## reset文件层面的操作：
 主要对暂存区起作用。
+https://zhuanlan.zhihu.com/p/31154756
