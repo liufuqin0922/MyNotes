@@ -19,6 +19,7 @@ whoami
 ssh user@remote_server tail -f /var/log/apache2/access.log | ngxtop -f
 ssh msfadmin@192.168.189.131 tail -f /var/log/apache2/access.log | ngxtop -f common
 ## 常用命令
+
 ```shell
 scp 文件路径 用户名@IP:存放路径
 who 查看tty
