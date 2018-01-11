@@ -67,6 +67,4 @@ base64转图片
 66667176e9b719899326552b7144c5eb438a743bc01666
 
 
-
-
-http://dev.xmwan.com/uploads/open/375/201801060352.php
+数据库备份表，dump，shell测试，！权限维持方法！
