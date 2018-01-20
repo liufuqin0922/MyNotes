@@ -1,3 +1,8 @@
+# 相关论坛
+openrce.org
+woodmann.com
+hexblog.com
+
 # 工具
 
 ## java逆向
