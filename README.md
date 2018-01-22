@@ -1,11 +1,19 @@
 个人笔记而已，没啥好看的，可以给我提交哦  
 Todo:
-* 各种后门隐藏与发现 
-* webshell
-* getshell后如何getflag
+* 各种后门隐藏与发现,制作 asp php python c
+* webshell check
+* 后台路径文件合并 表，字段
+* phpmyadminm暴力破解工具，字典
+* 中国特色字典
+* 拿到shell后渗透阶段
+* nmap
+* Cain4.9 多口令破解测试
+* arp欺骗工具准备
+* getshell后如何getflag 执行命令
+* Wordpress综合检测工具
 * msf 一件传shell 执行
 * 各大cms shell
-* 提权
+* 提权 通过shell
 * owasp
 * 删账户
 * 改cd ls..
@@ -25,6 +33,13 @@ Todo:
 * 自动化程度提高
 * 编译所有的py
 * php 5.10 poc
+
+服务:
+* owasp
+* meta vuln
+* wooyun
+* ubuntu博客
+* 武器库
 
 # 如何重启php
 
