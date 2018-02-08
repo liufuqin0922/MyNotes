@@ -33,7 +33,8 @@ Todo:
 * 自动化程度提高
 * 编译所有的py
 * php 5.10 poc
-
+* xss 打cookie
+* 
 服务:
 * owasp
 * meta vuln
