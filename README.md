@@ -74,9 +74,7 @@ https://bbs.ichunqiu.com/thread-25092-1-1.html?from=aqzx2
 ## mac terminal
 http://www.jianshu.com/p/c36dfdfa6569
 
-#gist
-85eed685f7243831c2d93af98d2bbdbe
-kk
+
 base64转图片
 <img src="data:image/jpg;base64,ZmxhZ3t4Y3Rmezg4MzEyN2QyNzI2MjZjOWFmN2Q3M2Q5M2JlMDBkZTQ3fX0=">
 
