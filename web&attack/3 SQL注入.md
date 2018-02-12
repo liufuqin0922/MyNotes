@@ -1,6 +1,13 @@
 ## 注入   
-工具:Pangolin  
-Havij
+常用函数：
+version() 数据库版本
+@@datadir 数据库路径
+@@version_compile_os
+user()
+database() 数据库名称
+system_user() 系统用户名
+current_user() 当前用户名
+session_user() 连接数据库的用户名
 ### 手工注入 
 
 > and exists(select * from admin) 
