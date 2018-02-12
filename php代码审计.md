@@ -1,5 +1,14 @@
+# php.ini
+php.ini并放置在httpd.conf中PHPIniDir指定的目录，使用phpinfo()函数可以查看
+safe_mode = off 避免各种奇怪的失败
+register_globals 关闭
+open_basedir 配置， 防止目录遍历
+allow_url_fopen 关闭 文件打开限制
+display_error =off 避免攻击者获取更多信息
+expose_php = off 隐藏版本信息
+
 # 代码审计
-## 两款代码审计启动 seay ,RIPS
+## 两款代码审计工具 seay ,RIPS
 这也是一个坑,seay国产
 
 ## phpmyadmin 密码修改
