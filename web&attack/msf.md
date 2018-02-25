@@ -1,3 +1,5 @@
+
+
 # msfvenom
  metasploit 更新后就移除了 msfencode 以及 msfpayload
 
