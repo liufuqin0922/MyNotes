@@ -1,4 +1,7 @@
+# 数据库链接
+ db_connect msf:hack-money@127.0.0.1/msf2
 # 资料
+
 https://zhuanlan.zhihu.com/p/25857679
 http://www.kali.org.cn/thread-20133-1-1.html
 http://blog.csdn.net/lijia111111/article/details/64124693
@@ -47,20 +50,6 @@ msf>show payload  (显示合适的payload反弹shell。reverse_tcp（反弹时tc
 若觉得show和search命令所提供的信息过于简短，可以使用info命令加上模块名字来显示此模块的详细信息/参数说明以及所有可用的目标操作系统（如果已选择了某个模块，直接在模块的提示符下输入info即可。
 
  
-
-7.set和unset
-
-参数会被标记为必填项（required），这样的参数必须经过手工设置并处于启动状态。
-
-set（已设置） unset（未设置）
-
-用set设置参数
-
-set LHOST  192***(设置本地主机）
-
-set RHOST 192.168****(设置攻击对象ip地址）
-
-set TARGET *(设置目标操作系统类型）
 
  
 
