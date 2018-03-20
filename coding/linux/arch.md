@@ -5,7 +5,7 @@
 http://blog.csdn.net/r8l8q8/article/details/73252970#79tkjm1497440352464
 
 更改mkinitcpio配置后，需要手动重新生成镜像：
-    mkinitcpio -p linux
+    mkinitcpio -p linuxx
 警告: lvm2、mdadm、encrypt支持默认是关闭的。
 参考：https://wiki.archlinux.org/index.php/Mkinitcpio_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)
 
