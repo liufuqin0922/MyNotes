@@ -54,7 +54,7 @@ cat /var/log/apache2/access.log | cut ‐f4 ‐d
 r | head ‐
 ```
 netstat ‐ant|awk |grep |sed ‐e ‐e |sort|uniq ‐c|sort ‐rn
-
+win:netstat -no 查看网络链接
 # 防御&&attack
 
 ## 防篡改
