@@ -4,6 +4,9 @@
 # 联网
 http://blog.csdn.net/r8l8q8/article/details/73252970#79tkjm1497440352464
 
+## wifi 
+iw工具和wpa_supplicant
+
 更改mkinitcpio配置后，需要手动重新生成镜像：
     mkinitcpio -p linuxx
 警告: lvm2、mdadm、encrypt支持默认是关闭的。
