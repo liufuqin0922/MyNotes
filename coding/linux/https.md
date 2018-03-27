@@ -5,7 +5,7 @@
 无法执行acme.sh:
     source ~/.bashrc
 ## 获取证书
-下面是cugapp.com的脚本。
+下面是dddd.im的脚本。
 ```zsh
     export DP_Id="50161"  &&
     export DP_Key="a32f9c8ac07412517e67a0121ca0fb07"  &&
