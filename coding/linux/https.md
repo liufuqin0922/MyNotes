@@ -2,8 +2,10 @@
 ## acme.sh的方式
 获取acme脚本如下，注意报错，安装依赖
 - `curl https://get.acme.sh | sh`
-无法执行acme.sh:
+
+## 无法执行acme.sh
     source ~/.bashrc
+不行就去.acme.sh里面吧
 ## 获取证书
 下面是dddd.im的脚本。
 ```zsh
