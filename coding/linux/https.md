@@ -10,8 +10,8 @@
 ## 获取证书
 下面是dddd.im的脚本。
 ```zsh
-    export DP_Id="50161"  &&
-    export DP_Key="a32f9c8ac07412517e67a0121ca0fb07"  &&
+    export DP_Id="1111"  &&
+    export DP_Key="xxxxx"  &&
     acme.sh --issue --dns dns_dp -d *.dddd.im -d dddd.im
 
     # sed -i '4,5c ssl_certificate /usr/local/nginx/conf/ssl/cugapp.com.cer;\
