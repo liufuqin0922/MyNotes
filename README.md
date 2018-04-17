@@ -41,6 +41,7 @@
 * wooyun
 * ubuntu博客
 * 武器库
+* autopwn
 
 # 如何重启php
 
@@ -59,6 +60,7 @@ kill -USR2 \<master pid\>
 * 根据漏洞写出EXP，发动攻击 * 被攻击后完成EXP，PATCH
 * 自动化种马，权限维持
 * 自动化收割
+* 批量扫描http服务
 
 # 查看已建立的网络连接及进程
 
