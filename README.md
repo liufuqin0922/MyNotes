@@ -1,3 +1,5 @@
+http://ctf5.shiyanbar.com/web/index_3.php
+写一个爆破字段爆破工具
 个人笔记：
 
 * 各种后门隐藏与发现,制作 asp php python c
@@ -74,12 +76,13 @@ http://bobao.360.cn/ctf/learning/210.html
 https://bbs.ichunqiu.com/thread-25092-1-1.html?from=aqzx2
 
 ## mac terminal
+
 http://www.jianshu.com/p/c36dfdfa6569
 
 
 base64转图片
-<img src="data:image/jpg;base64,ZmxhZ3t4Y3Rmezg4MzEyN2QyNzI2MjZjOWFmN2Q3M2Q5M2JlMDBkZTQ3fX0=">
 
+<img src="data:image/jpg;base64,ZmxhZ3t4Y3Rmezg4MzEyN2QyNzI2MjZjOWFmN2Q3M2Q5M2JlMDBkZTQ3fX0=">
 
 
 数据库备份表，dump，shell测试！权限维持!提权
