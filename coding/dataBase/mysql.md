@@ -9,7 +9,9 @@ net start mysql
 mysqld  -remove //卸载
 ## 非root账户，localhost不能登陆
 ```
+
 ## 授权 root登陆，外部访问
+
 ```sql
 update mysql.user set plugin = 'mysql_native_password' where User='root';
 grant all privileges on *.* to 'root'@'localhost';
