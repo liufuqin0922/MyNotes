@@ -1,5 +1,6 @@
 http://ctf5.shiyanbar.com/web/index_3.php
 写一个爆破字段爆破工具
+mysql一键安装
 个人笔记：
 
 * 各种后门隐藏与发现,制作 asp php python c

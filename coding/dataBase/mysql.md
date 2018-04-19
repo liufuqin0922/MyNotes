@@ -1,0 +1,104 @@
+# Mysql 常用命令
+
+## 安装
+
+```cmd
+mysqld --initialize //第一次安装，初始化data文件
+mysqld  -install
+net start mysql
+mysqld  -remove //卸载
+## 非root账户，localhost不能登陆
+```
+
+## 授权 root登陆，外部访问
+
+```sql
+update mysql.user set plugin = 'mysql_native_password' where User='root';
+grant all privileges on *.* to 'root'@'localhost';
+--所有ip都可以的登陆
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
+```
+
+
+
+## 常用命令，查询
+
+> select @@basedir;
+> 返回mysql安装根目录
+
+---
+> show variables like '%plugin%';  
+> 返回插件目录
+
+## mysql 密码忘记处理
+
+### Windows 密码忘记处理
+
+1. 以系统管理员身份登陆系统。
+2. 打开cmd-----net start 查看mysql是否启动。启动的话就停止net stop mysql
+3. 我的mysql安装在d:\usr\local\mysql4\bin下。
+4. 跳过权限检查启动mysql 
+d:\usr\local\mysql\bin\mysqld-nt --skip-grant-tables
+5. 重新打开cmd。进到d:\usr\local\mysql4\bin下：
+d:\usr\local\mysql\bin\mysqladmin -u root flush-privileges password "newpassword"
+d:\usr\local\mysql\bin\mysqladmin -u root -p shutdown  这句提示你重新输密码。
+6. 在cmd里net start mysql
+7. 搞定了。
+
+### Linux 密码忘记处理
+
+有可能你的系统没有 safe_MySQLd 程序(比如我现在用的 ubuntu操作系统, apt-get安装的MySQL) , 下面方法可以恢复
+1. 停止MySQLd；
+
+    sudo /etc/init.d/MySQL stop
+(您可能有其它的方法,总之停止MySQLd的运行就可以了)
+2. 用以下命令启动MySQL，以不检查权限的方式启动；
+
+    MySQLd --skip-grant-tables &
+
+3. 然后用空密码方式使用root用户登录 MySQL；
+
+    MySQL -u root
+
+4. 修改root用户的密码；
+
+    MySQL> update MySQL.user set password=PASSWORD('newpassword') where User='root';  
+    MySQL> flush privileges;  
+    MySQL> quit 
+重新启动MySQL
+    /etc/init.d/MySQL restart
+    
+# mysql 导入导出数据
+## 从csv 导入
+load data infile "C:\\wamp64\\tmp\\14.csv"
+into table vote_person_info character set utf8 
+fields terminated by ',' optionally enclosed by '"' escaped by '"'
+lines terminated by '\r\n';
+
+## 导出数据
+C:\wamp64\bin\mysql\mysql5.7.14\bin\mysqldump.exe -h 127.0.0.1 -u root --default-character-set=utf8 hise >C:\Users\msi\Desktop\sql.sql
+
+# mysql各种坑
+## 时间相减问题
+
+**两个时间不能直接相减，不然会出错!!**
+```sql
+    mysql> select t1,t2,t2-t1 from mytest;  
+    +---------------------+---------------------+-------+  
+    | t1                  | t2                  | t2-t1 |  
+    +---------------------+---------------------+-------+  
+    | 2013-04-21 16:59:33 | 2013-04-21 16:59:43 |    10 |  
+    | 2013-04-21 16:59:33 | 2013-04-21 17:00:33 |  4100 |  
+    | 2013-04-21 16:59:33 | 2013-04-21 17:59:35 | 10002 |  
+    +---------------------+---------------------+-------+  
+    3 rows in set  
+```
+
+### 原因
+实际是mysql的时间相减是做了一个隐式转换操作，将时间转换为`整数`但并不是用`unix_timestamp`转换，而是直接把年月日时分秒拼起来，如2013-04-21 16:59:33 直接转换为`20130421165933`，由于时间不是十进制，所以最后得到的结果**没有意义**，这也是导致上面出现坑爹的结果。
+
+### 解决
+要得到正确的时间相减秒值，有以下3种方法：
+1. `time_to_sec(timediff(t2, t1))`,
+2. `timestampdiff(second, t1, t2)`,
+3. `unix_timestamp(t2) - unix_timestamp(t1)`,
