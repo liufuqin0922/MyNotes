@@ -297,7 +297,10 @@ cookie注入：-u http://xxx.asp --cookie "id=114" --level 2
 
 
 ## 绕过
-sql注入绕行waf:/!**/ /!**/ = 空格；POST ，cookie中转,大小写混合，替换关键字，使用编码，使用注释，等价函数和命令，使用特殊符号，http参数控制，pwn ,select \`version()\`
+sql注入绕行waf:；POST ，cookie中转,大小写混合，替换关键字，使用编码，使用注释，等价函数和命令，使用特殊符号，http参数控制，pwn ,select \`version()\`
+sel%00ect
+%20=>空格
+/!**/ => 空格
 
 4. 域传送:dnsenum -enum xxx.com 检测域传送
 5. http://www.dmzlab.com/77396.html  

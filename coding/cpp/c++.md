@@ -1,5 +1,6 @@
 [TOC]
-#杂项
+
+# 杂项
 * wchar_t 扩展字符集，cin和cout将输入输出看作是char流，因此不适用处理wchar_ t类型，通过前缀L指示宽字符常量和宽字符串。     
 
 > c和c++对有效位数要求是，float至少32位，double至少是48位，切不少于float。long
@@ -123,3 +124,31 @@
         strftime(cTime,32,"%Y-%m-%d %H:%M:%S",localtime(&time_t(dwTime)));
         return QString(cTime);
     }
+
+## gcc编译
+
+1.使用gcc生成静态库及静态库使用方法：
+
+　　在此例中，test.c用于编译生成静态库libtest.a，test.h为libtest.a对应的头文件。
+
+　　第一步：生成test.o目标文件，使用gcc -c test.c -o test.o命令。
+
+　　第二步：使用ar将test.o打包成libtest.a静态库，使用ar rcs -o libtest.a test.o命令
+
+　　第三步：生成libtest.a静态库后，可以使用命令ar t libtest.a查看libtest.a文件中包含哪些文件。
+
+　　第四步：编译main.c，并使用libtest.a静态库，链接时-l参数后不加空格指定所需要链接的库，这里库名是libtest.a，但是只需要给出-ltest即可，ld会以libtest作为库的实际名字。完整的命令为：gcc -o app_static main.c -L. -ltest 或者是gcc -o app_static main.c libtest.a
+
+　　第五步：运行app_static
+
+　　直接使用命令./app_static
+
+　　2.使用gcc生成动态库及使用动态库的方法
+
+　　第一步：生成test.o目标文件，使用如下命令。在此处需要添加-fPIC参数，该参数用于生成位置无关代码已工生成动态库使用，使用命令：gcc -c -o test.o -fPIC test.c
+
+　　第二步：使用-shared参数生成动态库，使用如下命令：gcc -shared -o libmyshare.so test.o,上述两个命令可以连在一起，如下所示：gcc -shared -fPIC -o libmyshare.so test.c
+
+　　第三步：编译main.c，使用libmyshare.so动态库，命令如下gcc -o app_share main.c -L. -lmyshare.使用ldd app_share命令查看app_share使用动态库，如果libmyshare无法找到，直接执行app_share就会出现错误。解决方法：首先使用export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH将当前目录加入LD_LIBRARY_PATH变量中。再次运行ldd app_share
+
+　　另一种编译main.c，并链接libmyshare.so的方式如下（该方式通过./libmyshare.so直接指定使用当前目录下的libmyshare.so文件），使用命令：gcc -o app_share main.c ./libmyshare.so
