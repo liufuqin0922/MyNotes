@@ -10,6 +10,10 @@ mysqld  -remove //卸载
 ## 非root账户，localhost不能登陆
 ```
 
+## 创建用户
+
+CREATE USER \'cugh\'@\'%\' IDENTIFIED BY \'ilovecug\';
+
 ## 授权 root登陆，外部访问
 
 ```sql

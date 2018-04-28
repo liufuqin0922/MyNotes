@@ -28,9 +28,11 @@ expose_php = off 隐藏版本信息
 unserialize 会调用__wakeup 函数
 
 ### assert()
+
 当第一参数是字符串时，执行字符串代码
 
-## 文件上传绕过
+
+
 ### 更改http头 
 Content-Type:image/gif
 

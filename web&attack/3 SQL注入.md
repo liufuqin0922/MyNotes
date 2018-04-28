@@ -1,4 +1,5 @@
-## 注入   
+## 注入
+
 常用函数：
 version() 数据库版本
 @@datadir 数据库路径
@@ -13,8 +14,10 @@ rand() 随机0-1
 concat("abc","123")=abc123
 concat("abc",0x22,"123")=abc"123
 
-### 手工注入 
+### 手工注入
+
 #### 延时注入
+
 select sleep(if(length(@@version)=6,2,0));
 长度为6 sleep 2秒，否则0秒。
 select sleep(if(ord(mid((select user()),1,1))<150,0,2));
