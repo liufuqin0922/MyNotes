@@ -11,7 +11,7 @@ sudo add-apt-repository \
    stable" &&
 sudo apt-get update &&
 sudo apt-get install docker-ce &&
-sudo echo -e "{\n 
+echo -e "{\n 
   \"registry-mirrors\": [\"https://docker.mirrors.ustc.edu.cn/\"]
-}" >/etc/docker/daemon.json 
+}" | sudo tee /etc/docker/daemon.json 
 sudo systemctl restart docker
